@@ -2,7 +2,7 @@ import React from "react";
 
 function Navbar() {
   return (
-    <div className="main lg:flex md:flex sm:flex-wrap justify-between items-center py-2 bg-[#40407a] px-4 sticky top-0 z-10">
+    <div className="main lg:flex md:flex sm:flex-wrap justify-between items-center pt-2 bg-[#40407a] px-4 sticky top-0 z-10">
       <div className="left flex items-center space-x-2 justify-center">
         <img
           className="w-10 h-10"
