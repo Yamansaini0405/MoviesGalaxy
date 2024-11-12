@@ -4,6 +4,7 @@ import SearchBox from "./components/SearchBox";
 import "./App.css";
 import { useState } from "react";
 
+
 function App() {
   const [allMovieData, setAllMovieData] = useState();
   let [searchMovie, setSearchMovie] = useState();
@@ -14,7 +15,7 @@ function App() {
     try {
       setLoading(true);
       let response = await fetch(
-        `https://omdbapi.com/?s=${searchMovie}&apikey=a1de9591`
+        `https://omdbapi.com/?s=${searchMovie}&apikey=188b84a9`
       );
       let data = await response.json();
       setAllMovieData(data.Search);
@@ -35,6 +36,7 @@ function App() {
         />
         <MovieCard allMovieData={allMovieData} loading={loading} />
       </div>
+    
     </div>
   );
 }
