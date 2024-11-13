@@ -4,8 +4,8 @@ import {RouterProvider, createBrowserRouter, createRoutesFromElements, Route} fr
 import Layout from './Layout.jsx'
 
 import './index.css'
-import App from './App.jsx'
-import Trending from './Components/Trending.jsx'
+
+import Trending from './components/Trending.jsx'
 
 const router = createBrowserRouter (
   createRoutesFromElements(
