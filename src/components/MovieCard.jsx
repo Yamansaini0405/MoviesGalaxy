@@ -3,6 +3,7 @@ import React from "react";
 function MovieCard({ allMovieData = [], loading }) {
   return (
     <div>
+      
       {loading ? (
         <div className="flex justify-center ">
           <img
@@ -12,7 +13,10 @@ function MovieCard({ allMovieData = [], loading }) {
           />
         </div>
       ) : (
+        <>
+        
         <div className="flex flex-wrap px-4 lg:px-10 ml-12">
+          
           {allMovieData.map((movie, idx) => {
             const { Poster, Title, Year } = movie;
             return (
@@ -30,6 +34,7 @@ function MovieCard({ allMovieData = [], loading }) {
             );
           })}
         </div>
+        </>
       )}
     </div>
   );
