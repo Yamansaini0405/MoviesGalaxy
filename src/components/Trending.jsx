@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useContext } from "react";
 import { AppContext } from "../context/MovieContext";
-import MovieCard from "./Moviecard";
+import MovieCard from "./MovieCard";
 
 function Trending() {
   const [trending, setTrending] = useState([]);

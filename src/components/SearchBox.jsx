@@ -1,7 +1,7 @@
 import React from "react";
 import { useContext } from "react";
 import { AppContext } from "../context/MovieContext";
-import Moviecard from "./Moviecard";
+import Moviecard from "./MovieCard";
 
 function SearchBox() {
   const name = useContext(AppContext);
