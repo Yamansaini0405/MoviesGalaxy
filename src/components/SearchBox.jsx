@@ -1,7 +1,27 @@
-import React from "react";
+import React,{useState} from "react";
+import MovieCard from "./MovieCard";
 
-function SearchBox({ searchMovie, setSearchMovie, fetchMovieData }) {
+function SearchBox({ searchMovie, setSearchMovie }) {
+  const [allMovieData, setAllMovieData] = useState();
+  const [loading, setLoading] = useState(false);
+
+  const fetchMovieData = async () => {
+    console.log(searchMovie);
+    try {
+      setLoading(true);
+      let response = await fetch(
+        `https://api.themoviedb.org/3/search/movie?query=${searchMovie}&api_key=79218d83e67c13cb59242f9f31418607&`
+      );
+      let data = await response.json();
+      setAllMovieData(data.results);
+      setLoading(false);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   return (
+    <>
     <div className="main flex justify-center px-5 lg:px-0 py-5">
       <input
         type="text"
@@ -19,6 +39,9 @@ function SearchBox({ searchMovie, setSearchMovie, fetchMovieData }) {
         Search
       </button>
     </div>
+
+    <MovieCard allMovieData={allMovieData} loading={loading} />
+    </>
   );
 }
 

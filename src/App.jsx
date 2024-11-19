@@ -6,24 +6,24 @@ import { useState } from "react";
 
 
 function App() {
-  const [allMovieData, setAllMovieData] = useState();
-  let [searchMovie, setSearchMovie] = useState();
-  const [loading, setLoading] = useState(false);
+  // const [allMovieData, setAllMovieData] = useState();
+  let [searchMovie, setSearchMovie] = useState("");
+  // const [loading, setLoading] = useState(false);
 
-  const fetchMovieData = async () => {
-    console.log(searchMovie);
-    try {
-      setLoading(true);
-      let response = await fetch(
-        `https://omdbapi.com/?s=${searchMovie}&apikey=188b84a9`
-      );
-      let data = await response.json();
-      setAllMovieData(data.Search);
-      setLoading(false);
-    } catch (error) {
-      console.log(error);
-    }
-  };
+  // const fetchMovieData = async () => {
+  //   console.log(searchMovie);
+  //   try {
+  //     setLoading(true);
+  //     let response = await fetch(
+  //       `https://omdbapi.com/?s=${searchMovie}&apikey=188b84a9`
+  //     );
+  //     let data = await response.json();
+  //     setAllMovieData(data.Search);
+  //     setLoading(false);
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // };
 
   return (
     <div>
@@ -34,7 +34,7 @@ function App() {
           setSearchMovie={setSearchMovie}
           fetchMovieData={fetchMovieData}
         />
-        <MovieCard allMovieData={allMovieData} loading={loading} />
+        {/* <MovieCard allMovieData={allMovieData} loading={loading} /> */}
       </div>
     
     </div>
