@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
+import { NavLink } from "react-router-dom";
+import { AppContext } from "../context/MovieContext";
 
 function MovieCard({ allMovieData = [], loading }) {
+  const data = useContext(AppContext);
   return (
     <div>
-      
       {loading ? (
         <div className="flex justify-center ">
           <img
@@ -13,28 +15,29 @@ function MovieCard({ allMovieData = [], loading }) {
           />
         </div>
       ) : (
-        <>
-        
-        <div className="flex flex-wrap px-4 lg:px-10 ml-12">
-          
+        <div className="flex flex-wrap px-4 lg:px-10 ml-12 mt-4">
           {allMovieData.map((movie, idx) => {
-            // const { Poster, Title, Year } = movie;
             return (
-              <div key={idx} className="p-2 md:w-1/4 w-full mb-4 max-h-[28rem]">
-                <div className="bg-[#40407a] w-4/5 h-full p-3 rounded-2xl shadow-lg hover:-translate-y-1 border-2 border-gray-600 ">
+              <div className="p-2 md:w-1/4 w-full mb-4 max-h-[28rem] ">
+                <div className="bg-[#40407a] w-4/5 h-full p-3 rounded-2xl shadow-lg hover:-translate-y-1 border-2 border-gray-600">
                   <img
                     className="rounded-lg w-full mb-2 h-4/5 "
                     src={`https://image.tmdb.org/t/p/w200${movie.poster_path}`}
                     alt=""
                   />
-                  <h3 className="text-xl text-white font-bold">{movie.title}</h3>
-                  <h2 className="text-lg text-white mb-2">Year : {movie.release_date}</h2>
+                  <NavLink to="/Overveiw">
+                    <h3 className="text-xl text-white font-bold">
+                      {movie.title}
+                    </h3>
+                  </NavLink>
+                  <h2 className="text-lg text-white mb-2">
+                    Year : {movie.release_date}
+                  </h2>
                 </div>
               </div>
             );
           })}
         </div>
-        </>
       )}
     </div>
   );
