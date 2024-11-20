@@ -13,6 +13,8 @@ import SearchBox from "./components/SearchBox.jsx";
 import Overveiw from "./components/Overveiw.jsx";
 import "./index.css";
 import Action from "./components/Action.jsx";
+import Romance from "./components/Romance.jsx";
+import Horror from "./components/Horror.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -21,6 +23,8 @@ const router = createBrowserRouter(
       <Route path="/" element={<SearchBox />} />
       <Route path="/Overveiw" element={<Overveiw/>}/>
       <Route path="/Action" element={<Action/>}/>
+      <Route path="/Romance" element={<Romance/>}/>
+      <Route path="/Horror" element={<Horror/>}/>
     </Route>
   )
 );

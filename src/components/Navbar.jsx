@@ -27,26 +27,17 @@ function Navbar() {
             <li class="relative group">
               <NavLink className="text-white nav-btn  rounded block">Category</NavLink>
               
-              <ul class="absolute bg-color py-2  w-48 flex flex-wrap rounded group-hover:block hidden">
+              <ul class="absolute bg-color  py-2  w-48 flex flex-wrap rounded group-hover:block hidden">
                 <li>
                   <NavLink to='/Action' className="block text-white hover:bg-gray-700 px-4 py-2">Action</NavLink>
                   
                 </li>
                 <li>
-                  <a
-                    href="#"
-                    class="block text-white hover:bg-gray-700 px-4 py-2"
-                  >
-                    Sub-Option 2
-                  </a>
+                <NavLink to='/Romance' className="block text-white hover:bg-gray-700 px-4 py-2">Romance</NavLink>
+                  
                 </li>
                 <li>
-                  <a
-                    href="#"
-                    class="block text-white hover:bg-gray-700 px-4 py-2"
-                  >
-                    Sub-Option 3
-                  </a>
+                <NavLink to='/Horror' className="block text-white hover:bg-gray-700 px-4 py-2">Horror</NavLink>
                 </li>
                 <li>
                   <a
