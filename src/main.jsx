@@ -12,6 +12,7 @@ import Trending from "./components/Trending.jsx";
 import SearchBox from "./components/SearchBox.jsx";
 import Overveiw from "./components/Overveiw.jsx";
 import "./index.css";
+import Action from "./components/Action.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -19,6 +20,7 @@ const router = createBrowserRouter(
       <Route path="/Trending" element={<Trending />} />
       <Route path="/" element={<SearchBox />} />
       <Route path="/Overveiw" element={<Overveiw/>}/>
+      <Route path="/Action" element={<Action/>}/>
     </Route>
   )
 );

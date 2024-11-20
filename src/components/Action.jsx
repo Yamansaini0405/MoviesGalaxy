@@ -1,22 +1,23 @@
-import React, { useEffect, useState } from "react";
-import { useContext } from "react";
-import { AppContext } from "../context/MovieContext";
-import MovieCard from "./MovieCard";
+import React from 'react'
+import { useState, useContext, useEffect } from 'react';
+import { AppContext } from '../context/MovieContext';
 import { MdOutlineDoubleArrow } from "react-icons/md";
+import MovieCard from './MovieCard';
 
-function Trending() {
-  const [trending, setTrending] = useState([]);
+
+function Action() {
+    const [bollywood, setBollywood] = useState([]);
 
   const info = useContext(AppContext);
   const fetchMovie = async () => {
     info.setAllMovieData([]);
     info.setLoading(true);
     let res = await fetch(
-      `https://api.themoviedb.org/3/movie/popular?language=en-US&page=1&api_key=79218d83e67c13cb59242f9f31418607&`
+      `https://api.themoviedb.org/3/discover/movie?api_key=79218d83e67c13cb59242f9f31418607&language=hi-IN&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_genres=27`
     );
     let data = await res.json();
     console.log(data.results);
-    setTrending(data.results);
+    setBollywood(data.results);
     info.setLoading(false);
     info.setSearchMovie("")
   };
@@ -26,7 +27,7 @@ function Trending() {
   }, []);
   return (
     <>
-      <div>
+    <div>
         {info.loading ? (
           <div className="flex justify-center ">
             <img
@@ -39,13 +40,14 @@ function Trending() {
           
           <div className="flex flex-wrap  lg:px-4 ">
            <MdOutlineDoubleArrow className="md:text-4xl text-2xl text-white md:ml-[100px] ml-[60px] mt-8 font-bold text-[#00FFFF]"/>
-           <h3 className="text-white text-2xl md:text-4xl mt-7 ml-2 font-bold text-[#00FFFF]">Trending Movies</h3>
-            <MovieCard allMovieData={trending} loading={info.loading} />
+           <h3 className="text-white text-2xl md:text-4xl mt-7 ml-2 font-bold text-[#00FFFF]">Action Movies</h3>
+            <MovieCard allMovieData={bollywood} loading={info.loading} />
           </div>
         )}
       </div>
     </>
-  );
+
+  )
 }
 
-export default Trending;
+export default Action

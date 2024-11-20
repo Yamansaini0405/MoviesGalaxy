@@ -21,8 +21,52 @@ function Navbar() {
           <NavLink to="/Trending">
             <li>Trending</li>
           </NavLink>
-          <li>Contact</li>
-          <li>Services</li>
+          
+         
+            {" "}
+            <li class="relative group">
+              <NavLink className="text-white nav-btn  rounded block">Category</NavLink>
+              
+              <ul class="absolute bg-color py-2  w-48 flex flex-wrap rounded group-hover:block hidden">
+                <li>
+                  <NavLink to='/Action' className="block text-white hover:bg-gray-700 px-4 py-2">Action</NavLink>
+                  
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="block text-white hover:bg-gray-700 px-4 py-2"
+                  >
+                    Sub-Option 2
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="block text-white hover:bg-gray-700 px-4 py-2"
+                  >
+                    Sub-Option 3
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="block text-white hover:bg-gray-700 px-4 py-2"
+                  >
+                    Sub-Option 1
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="block text-white hover:bg-gray-700 px-4 py-2"
+                  >
+                    Sub-Option 1
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li>Contact</li>
         </ul>
       </div>
       <div className=" hidden sm:block ">

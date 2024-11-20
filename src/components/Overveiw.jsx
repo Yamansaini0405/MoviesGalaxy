@@ -34,7 +34,7 @@ function Overveiw() {
   };
   useEffect(() => {
     getMovieVideo();
-  }, []);
+  },[]);
 
   return (
     <div>

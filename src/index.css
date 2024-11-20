@@ -32,3 +32,23 @@
 .hover{
   color: red;
 }
+
+.nav-btn{
+  background-color: transparent;
+  color: #ffffff;
+  
+  
+  font-size: 20px;
+  
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.nav-btn:hover{
+  color: #7575f7; /* Matches the border color */
+  /* Inverts the text color for contrast */
+ 
+}
+
+.bg{
+
+}
