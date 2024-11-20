@@ -1,7 +1,7 @@
 import React from "react";
 import { useContext } from "react";
 import { AppContext } from "../context/MovieContext";
-import Moviecard from "./Moviecard";
+import MovieCard from "./Moviecard";
 
 function SearchBox() {
   const name = useContext(AppContext);
@@ -24,7 +24,7 @@ function SearchBox() {
           Search
         </button>
       </div>
-      <Moviecard allMovieData={name.allMovieData} loading={name.loading} />
+      <MovieCard allMovieData={name.allMovieData} loading={name.loading} />
     </>
   );
 }
