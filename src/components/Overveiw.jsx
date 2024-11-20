@@ -47,7 +47,7 @@ function Overveiw() {
           />
         </div>
       ) : (
-        <div className=" bg-color text-white w-[100%] md:w-[80%] m-auto pb-8">
+        <div className=" bg-color text-white w-[100%] h-[100vh] md:h-[100%] md:w-[80%] m-auto pb-8">
           <div className="relative w-full max-w-5xl mx-auto py-4 px-4 md:px-0">
             <div className="relative w-full pt-[56.25%]">
               <iframe
@@ -62,7 +62,7 @@ function Overveiw() {
           </div>
 
           <div className="  h-[3rem] w-[100%] md:w-[90%] m-0 m-auto text-xl font-bold flex justify-center items-center justify-between px-8">
-            <p className=" text-xl md:text-2xl font-bold">Rating : {rating}</p>
+            <p className=" text-xl md:text-2xl font-bold">Rating : {rating}/10</p>
             <div className="icons flex justify-center items-center justify-around md:gap-4 gap-2">
               <AiFillLike className="text-xl md:text-3xl   hover:text-red-600" />
               <FaShare className="text-xl md:text-3xl hover:text-blue-600" />
@@ -71,7 +71,7 @@ function Overveiw() {
           </div>
           <div className=" h-[4rem] w-[100%] md:w-[90%] m-0 m-auto flex px-8 items-center">
             <p className=" text-lg md:text-2xl from-neutral200">
-              Trailer: <span className="font-bold">{title}, </span>
+              <span className="">Trailer:</span> <span className="font-bold">{title}, </span>
               <span>released on: {date}</span>
             </p>
           </div>
