@@ -1,7 +1,7 @@
 import React from "react";
 import { useContext } from "react";
 import { AppContext } from "../context/MovieContext";
-import Moviecard from "./MovieCard";
+import Moviecard from "./Moviecard";
 
 function SearchBox() {
   const name = useContext(AppContext);
@@ -19,7 +19,7 @@ function SearchBox() {
         />
         <button
           onClick={name.fetchMovieData}
-          className="bg-[#40407a] text-white px-4 rounded-r-lg border-gray-500 border-t-2 borderr-2 border-b-2"
+          className="bg-[#40407a] bg-color text-white px-4 rounded-r-lg border-gray-500 border-t-2 borderr-2 border-b-2"
         >
           Search
         </button>

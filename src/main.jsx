@@ -10,6 +10,7 @@ import Layout from "./Layout.jsx";
 import { AppProvider } from "./context/MovieContext.jsx";
 import Trending from "./components/Trending.jsx";
 import SearchBox from "./components/SearchBox.jsx";
+import Overveiw from "./components/Overveiw.jsx";
 import "./index.css";
 
 const router = createBrowserRouter(
@@ -17,6 +18,7 @@ const router = createBrowserRouter(
     <Route path="/" element={<Layout />}>
       <Route path="/Trending" element={<Trending />} />
       <Route path="/" element={<SearchBox />} />
+      <Route path="/Overveiw" element={<Overveiw/>}/>
     </Route>
   )
 );

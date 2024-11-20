@@ -13,7 +13,7 @@ export const AppProvider = ({ children }) => {
     try {
       setLoading(true);
       let response = await fetch(
-        `https://api.themoviedb.org/3/search/movie?query=${searchMovie}&api_key=79218d83e67c13cb59242f9f31418607&`
+        `https://api.themoviedb.org/3/search/movie?query=${searchMovie}&api_key=79218d83e67c13cb59242f9f31418607`
       );
       let data = await response.json();
       setAllMovieData(data.results);

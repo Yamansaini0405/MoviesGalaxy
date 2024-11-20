@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useContext } from "react";
 import { AppContext } from "../context/MovieContext";
-import MovieCard from "./MovieCard";
+import MovieCard from "./Moviecard";
+import { MdOutlineDoubleArrow } from "react-icons/md";
 
 function Trending() {
   const [trending, setTrending] = useState([]);
@@ -34,7 +35,10 @@ function Trending() {
             />
           </div>
         ) : (
-          <div className="flex flex-wrap px-4 lg:px-10 ml-12">
+          
+          <div className="flex flex-wrap  lg:px-4 ">
+           <MdOutlineDoubleArrow className="md:text-4xl text-2xl text-white md:ml-[100px] ml-[60px] mt-8 font-bold text-[#00FFFF]"/>
+           <h3 className="text-white text-2xl md:text-4xl mt-7 ml-2 font-bold text-[#00FFFF]">Trending Movies</h3>
             <MovieCard allMovieData={trending} loading={info.loading} />
           </div>
         )}

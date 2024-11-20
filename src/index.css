@@ -9,3 +9,26 @@
     min-height: 100vh;
     background-repeat: no-repeat;
   }
+
+  .bg-color {
+    background: linear-gradient(135deg, #40407a, #1e3799);
+}
+
+.bg-btn{
+  background-color: transparent;
+  color: #ffffff;
+  border: 2px solid #706fd3;
+  padding: 5px 10px;
+  font-size: 16px;
+  
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.bg-btn:hover{
+  background-color: #2a25b2; /* Matches the border color */
+   /* Inverts the text color for contrast */
+  box-shadow: 0 4px 15px rgba(112, 111, 211, 0.5); /* Adds a glowing effect */
+}
+.hover{
+  color: red;
+}
