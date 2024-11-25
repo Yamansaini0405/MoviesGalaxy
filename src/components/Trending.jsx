@@ -23,7 +23,7 @@ function Trending() {
 
   useEffect(() => {
     fetchMovie();
-  }, []);
+  });
   return (
     <>
       <div>
