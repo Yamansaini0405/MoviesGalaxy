@@ -12,6 +12,7 @@ function Upcoming() {
   useEffect(() => {
     // Function to fetch and sort data
     const fetchData = async () => {
+      info.setLoading(true);
       try {
         let allmovies = []
         let currPage = 1;
@@ -38,7 +39,8 @@ function Upcoming() {
           return  new Date(b.release_date) - new Date(a.release_date);
         });
 
-        setUpcoming(sortedData); // Update the state with sorted data
+        setUpcoming(sortedData);
+        info.setLoading(false); // Update the state with sorted data
       } catch (error) {
         console.error("Error fetching data:", error);
       } 
