@@ -15,49 +15,65 @@ function Navbar() {
       </div>
       <div className="right flex justify-center mr-0 sm:mr-16">
         <ul className="flex justify-evenly sm:space-x-10 space-x-5  text-lg md:text-xl font-bold text-white m-4 px-4  ">
-          <NavLink to="/">
+          <NavLink to="/" className="nav-btn">
             <li>Home</li>
           </NavLink>
-          <NavLink to="/Trending">
+          <NavLink to="/Trending" className="nav-btn">
             <li>Trending</li>
-          </NavLink>
-          
-         
-            {" "}
-            <li class="relative group">
-              <NavLink className="text-white nav-btn  rounded block">Category</NavLink>
-              
-              <ul class="absolute bg-color  py-2  w-48 flex flex-wrap rounded group-hover:block hidden">
-                <li>
-                  <NavLink to='/Action' className="block text-white hover:bg-gray-700 px-4 py-2">Action</NavLink>
-                  
-                </li>
-                <li>
-                <NavLink to='/Romance' className="block text-white hover:bg-gray-700 px-4 py-2">Romance</NavLink>
-                  
-                </li>
-                <li>
-                <NavLink to='/Horror' className="block text-white hover:bg-gray-700 px-4 py-2">Horror</NavLink>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    class="block text-white hover:bg-gray-700 px-4 py-2"
-                  >
-                    Sub-Option 1
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    class="block text-white hover:bg-gray-700 px-4 py-2"
-                  >
-                    Sub-Option 1
-                  </a>
-                </li>
-              </ul>
-            </li>
+          </NavLink>{" "}
+          <li class="relative group">
+            <NavLink className="text-white nav-btn  rounded block">
+              Category
+            </NavLink>
+
+            <ul class="absolute bg-color  py-2  w-48 flex flex-wrap rounded group-hover:block hidden">
+              <li>
+              <NavLink
+                  to="/Upcoming"
+                  className="block text-white hover:bg-gray-700 px-4 py-2"
+                >
+                  Upcoming
+                </NavLink>
+                
+              </li>
+              <li>
+              <NavLink
+                  to="/Action"
+                  className="block text-white hover:bg-gray-700 px-4 py-2"
+                >
+                  Action
+                </NavLink>
+                
+              </li>
+              <li>
+                <NavLink
+                  to="/Horror"
+                  className="block text-white hover:bg-gray-700 px-4 py-2"
+                >
+                  Horror
+                </NavLink>
+              </li>
+              <li>
+              <NavLink
+                  to="/Romance"
+                  className="block text-white hover:bg-gray-700 px-4 py-2"
+                >
+                  Romance
+                </NavLink>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="block text-white hover:bg-gray-700 px-4 py-2"
+                >
+                  Sub-Option 1
+                </a>
+              </li>
+            </ul>
+          </li>
+          <NavLink className="nav-btn">
             <li>Contact</li>
+          </NavLink>
         </ul>
       </div>
       <div className=" hidden sm:block ">

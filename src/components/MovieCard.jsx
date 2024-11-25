@@ -18,7 +18,7 @@ function MovieCard({ allMovieData = [], loading }) {
       ) : (
         <div className="flex flex-wrap px-4 lg:px-10 ml-12 mt-4">
           {allMovieData.map((movie, idx) => {
-            console.log(movie.overview)
+            
             return (
               <div
                 className="p-2 md:w-1/4 w-full mb-4 max-h-[30rem]  "

@@ -26,9 +26,10 @@ function Overveiw() {
     let data = await res.json();
     let arr = data.results;
     let newarr = arr.filter((item) => item.type === "Trailer");
-    console.log(newarr);
-    let trailer = newarr[0].key;
-    console.log(disc);
+    let trailer = ""
+    if(newarr.length !== 0? trailer = newarr[0].key:"")
+    // let trailer = newarr[0].key;
+    console.log("hello");
     setVideo(trailer);
     info.setLoading(false);
   };

@@ -15,6 +15,7 @@ import "./index.css";
 import Action from "./components/Action.jsx";
 import Romance from "./components/Romance.jsx";
 import Horror from "./components/Horror.jsx";
+import Upcoming from "./components/Upcoming.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -25,6 +26,7 @@ const router = createBrowserRouter(
       <Route path="/Action" element={<Action/>}/>
       <Route path="/Romance" element={<Romance/>}/>
       <Route path="/Horror" element={<Horror/>}/>
+      <Route path="/Upcoming" element={<Upcoming/>}/>
     </Route>
   )
 );
