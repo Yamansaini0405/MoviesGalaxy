@@ -18,10 +18,12 @@ import Horror from "./components/Horror.jsx";
 import Upcoming from "./components/Upcoming.jsx";
 import Comedy from "./components/Comedy.jsx";
 import Thriller from "./components/Thriller.jsx";
+import Login from "./components/Login.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path="/" element={<Layout />}>
+    <Route>
+      <Route path="/" element={<Layout />}>
       <Route path="/Trending" element={<Trending />} />
       <Route path="/" element={<SearchBox />} />
       <Route path="/Overveiw" element={<Overveiw/>}/>
@@ -31,6 +33,8 @@ const router = createBrowserRouter(
       <Route path="/Upcoming" element={<Upcoming/>}/>
       <Route path="/Comedy" element={<Comedy/>}/>
       <Route path="/Thriller" element={<Thriller/>}/>
+    </Route>
+    <Route path="/login" element={<Login />} />
     </Route>
   )
 );

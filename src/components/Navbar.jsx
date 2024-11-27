@@ -1,6 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
+
 // bg-[#40407a]
 function Navbar() {
   return (
@@ -79,7 +80,7 @@ function Navbar() {
       </div>
       <div className=" hidden sm:block ">
         <button className="py-4 px-8 text-xl bg-btn text-black font-bold  bg-[#1dd1a1] rounded-3xl ">
-          <NavLink to="/">Log in</NavLink>
+          <NavLink to="/login">Log in</NavLink>
         </button>
       </div>
     </div>
