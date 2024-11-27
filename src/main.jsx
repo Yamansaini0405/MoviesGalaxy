@@ -16,6 +16,8 @@ import Action from "./components/Action.jsx";
 import Romance from "./components/Romance.jsx";
 import Horror from "./components/Horror.jsx";
 import Upcoming from "./components/Upcoming.jsx";
+import Comedy from "./components/Comedy.jsx";
+import Thriller from "./components/Thriller.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -27,6 +29,8 @@ const router = createBrowserRouter(
       <Route path="/Romance" element={<Romance/>}/>
       <Route path="/Horror" element={<Horror/>}/>
       <Route path="/Upcoming" element={<Upcoming/>}/>
+      <Route path="/Comedy" element={<Comedy/>}/>
+      <Route path="/Thriller" element={<Thriller/>}/>
     </Route>
   )
 );

@@ -15,70 +15,71 @@ function Navbar() {
       </div>
       <div className="right flex justify-center mr-0 sm:mr-16">
         <ul className="flex justify-evenly sm:space-x-10 space-x-5  text-lg md:text-xl font-bold text-white m-4 px-4  ">
-          <NavLink to="/" className="nav-btn">
+          <NavLink to="/" className="nav-btn transition-transform transform hover:scale-125">
             <li>Home</li>
           </NavLink>
-          <NavLink to="/Trending" className="nav-btn">
+          <NavLink to="/Trending" className="nav-btn transition-transform transform hover:scale-125">
             <li>Trending</li>
           </NavLink>{" "}
           <li class="relative group">
-            <NavLink className="text-white nav-btn  rounded block">
+            <NavLink className="text-white nav-btn  rounded block ">
               Category
             </NavLink>
 
             <ul class="absolute bg-color  py-2  w-48 flex flex-wrap rounded group-hover:block hidden">
+              <li></li>
               <li>
-              <NavLink
-                  to="/Upcoming"
-                  className="block text-white hover:bg-gray-700 px-4 py-2"
-                >
-                  Upcoming
-                </NavLink>
-                
-              </li>
-              <li>
-              <NavLink
+                <NavLink
                   to="/Action"
-                  className="block text-white hover:bg-gray-700 px-4 py-2"
+                  className="block text-white  px-4 py-2 transition-transform transform hover:scale-110"
                 >
                   Action
                 </NavLink>
-                
               </li>
               <li>
                 <NavLink
                   to="/Horror"
-                  className="block text-white hover:bg-gray-700 px-4 py-2"
+                  className="block text-white  px-4 py-2 transition-transform transform hover:scale-110"
                 >
                   Horror
                 </NavLink>
               </li>
               <li>
-              <NavLink
+                <NavLink
                   to="/Romance"
-                  className="block text-white hover:bg-gray-700 px-4 py-2"
+                  className="block text-white  px-4 py-2 transition-transform transform hover:scale-110"
                 >
                   Romance
                 </NavLink>
               </li>
               <li>
-                <a
-                  href="#"
-                  class="block text-white hover:bg-gray-700 px-4 py-2"
+              <NavLink
+                  to="/Comedy"
+                  className="block text-white  px-4 py-2 transition-transform transform hover:scale-110"
                 >
-                  Sub-Option 1
-                </a>
+                  Comedy
+                </NavLink>
+              </li>
+              <li>
+              <NavLink
+                  to="/Thriller"
+                  className="block text-white  px-4 py-2 transition-transform transform hover:scale-110"
+                >
+                  Thriller Movies
+                </NavLink>
               </li>
             </ul>
           </li>
-          <NavLink className="nav-btn">
-            <li>Contact</li>
+          
+          <NavLink to="/Upcoming" className="nav-btn transition-transform transform hover:scale-125">
+            <li>Upcomings</li>
           </NavLink>
+          
         </ul>
       </div>
       <div className=" hidden sm:block ">
-        <button className="p-3 bg-btn text-black font-bold font-serif bg-[#1dd1a1] rounded-3xl ">
-          Bollywood
+        <button className="py-4 px-8 text-xl bg-btn text-black font-bold  bg-[#1dd1a1] rounded-3xl ">
+          <NavLink to="/">Log in</NavLink>
         </button>
       </div>
     </div>

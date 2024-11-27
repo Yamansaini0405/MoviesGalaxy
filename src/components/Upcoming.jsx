@@ -18,7 +18,7 @@ function Upcoming() {
         let currPage = 1;
         const startDate = new Date("2024-11-30");
     const endDate = new Date("2024-12-30");
-        while(currPage <= 10){
+        while(currPage <= 8){
             const response = await fetch(`https://api.themoviedb.org/3/movie/upcoming?language=en-US&page=${currPage}&api_key=79218d83e67c13cb59242f9f31418607`); // Replace with your API URL
         const result = await response.json();
         allmovies = [...allmovies, ...result.results];
