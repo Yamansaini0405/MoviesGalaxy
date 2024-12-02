@@ -5,7 +5,7 @@ export const AppContext = React.createContext();
 
 export const AppProvider = ({ children }) => {
   const [allMovieData, setAllMovieData] = useState([]);   
-  let [searchMovie, setSearchMovie] = useState();
+  let [searchMovie, setSearchMovie] = useState("");
   const [loading, setLoading] = useState(false);
 
   const fetchMovieData = async () => {
