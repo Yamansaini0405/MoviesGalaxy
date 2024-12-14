@@ -1,6 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-
+import Lottie from 'lottie-react'
+import Movie from "../assets/Animation.json"
 
 // bg-[#40407a]
 function Navbar() {
@@ -14,6 +15,7 @@ function Navbar() {
         />
         <h2 className="text-white font-bold text-2xl">MoviesGalaxy</h2>
       </div>
+      
       <div className="right flex justify-center mr-0 sm:mr-16">
         <ul className="flex justify-evenly sm:space-x-10 space-x-5  text-lg md:text-xl font-bold text-white m-4 px-4  ">
           <NavLink to="/" className="nav-btn transition-transform transform hover:scale-125">

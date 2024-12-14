@@ -24,7 +24,7 @@ function MovieCard({ allMovieData = [], loading }) {
                 className="p-2 md:w-1/4 w-full mb-4 max-h-[30rem]  "
                 key={idx}
               >
-                <div className="bg-[#40407a] bg-color w-4/5 h-full p-3 rounded-2xl shadow-lg hover:-translate-y-1 border-2 border-gray-600">
+                <div className="bg-[#40407a] bg-color w-4/5 h-full p-3 rounded-2xl shadow-lg transition hover:-translate-y-2 border-2 border-gray-600">
                   <img
                     className="rounded-lg w-full mb-2 h-4/5 "
                     src={`https://image.tmdb.org/t/p/w200${movie.poster_path}`}

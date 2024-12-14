@@ -9,6 +9,10 @@ export const AppProvider = ({ children }) => {
   const [loading, setLoading] = useState(false);
 
   const fetchMovieData = async () => {
+    if (searchMovie.trim() === "") {
+      alert("Please enter a movie name.");
+      return;
+    }
     console.log(searchMovie);
     try {
       setLoading(true);

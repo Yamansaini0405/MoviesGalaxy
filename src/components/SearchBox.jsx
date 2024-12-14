@@ -5,6 +5,14 @@ import MovieCard from "./MovieCard";
 
 function SearchBox() {
   const name = useContext(AppContext);
+  const handleKeyPress = (event) => {
+    if (event.key === "Enter") {
+      if (event.target.value !== "") {
+        name.setSearchMovie(event.target.value);
+        name.fetchMovieData()
+      }
+    }
+  };
   return (
     <>
       <div>
@@ -28,6 +36,7 @@ function SearchBox() {
                 placeholder="search"
                 className="bg-gray-200 placeholder-gray-400 px-2 py-2 outline-none border-2 border-gray-500 text-black rounded-l-lg w-80"
                 value={name.searchMovie}
+                onKeyDown={handleKeyPress}
                 onChange={(e) => {
                   if (e.target.value !== "") {
                     name.setSearchMovie(e.target.value);

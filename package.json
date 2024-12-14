@@ -35,6 +35,9 @@
 "dependencies": {
   
   
+"lottie-react": "^2.4.0",
+  
+  
 "react": "^18.3.1",
   
   
