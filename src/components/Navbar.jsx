@@ -29,7 +29,7 @@ function Navbar() {
               Category
             </NavLink>
 
-            <ul class="absolute bg-color  py-2  w-48 flex flex-wrap rounded group-hover:block hidden">
+            <ul class="absolute bg-color  py-2  w-48  flex-wrap rounded group-hover:block hidden">
               <li></li>
               <li>
                 <NavLink

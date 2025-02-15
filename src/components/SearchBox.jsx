@@ -6,10 +6,11 @@ import MovieCard from "./MovieCard";
 function SearchBox() {
   const name = useContext(AppContext);
   const handleKeyPress = (event) => {
+    console.log(name.searchMovie);
     if (event.key === "Enter") {
       if (event.target.value !== "") {
         name.setSearchMovie(event.target.value);
-        name.fetchMovieData()
+        name.fetchMovieData();
       }
     }
   };
@@ -41,11 +42,9 @@ function SearchBox() {
                   if (e.target.value !== "") {
                     name.setSearchMovie(e.target.value);
                   }
-                  
                 }}
               />
               <button
-              
                 onClick={name.fetchMovieData}
                 className="bg-[#40407a] bg-color text-white px-4 rounded-r-lg border-gray-500 border-t-2 borderr-2 border-b-2"
               >
