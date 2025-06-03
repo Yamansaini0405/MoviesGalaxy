@@ -15,8 +15,8 @@ function Upcoming() {
       try {
         let allmovies = [];
         let currPage = 1;
-        const startDate = new Date("2025-03-10");
-        const endDate = new Date("2025-04-28");
+        const startDate = new Date("2025-04-10");
+        const endDate = new Date("2025-06-28");
         while (currPage <= 8) {
           const response = await fetch(
             `https://api.themoviedb.org/3/movie/upcoming?language=en-US&page=${currPage}&api_key=79218d83e67c13cb59242f9f31418607`

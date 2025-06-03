@@ -6,7 +6,7 @@ import Movie from "../assets/Animation.json"
 // bg-[#40407a]
 function Navbar() {
   return (
-    <div className="main bg-color lg:flex md:flex sm:flex-wrap justify-between items-center pt-2  px-12 py-1 sticky top-0 z-10">
+    <div className="main bg-color lg:flex md:flex sm:flex-wrap justify-between items-center pt-2  px-12 py-1 sticky top-0 z-10 rounded-xl">
       <div className="left flex items-center space-x-2 justify-center">
         <img
           className="w-10 h-10"
